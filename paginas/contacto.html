@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y sedes | ALTER EGO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<script>(function(){try{var t=sessionStorage.getItem('alterego_theme_mode');t=t==='light'?'light':'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="../archivos/Logo Negativo.png">
+  <link rel="stylesheet" href="../css/frontend.css?v=20260715-nav-light-fix">
+</head>
+<body>
+<header class="header">
+  <div class="container header__content">
+    <a href="../index.html" class="logo"><img src="../archivos/blanco.png" alt="ALTER EGO"></a>
+    <nav class="nav" id="nav">
+      <a href="../index.html">Inicio</a>
+      <div class="nav-dropdown"><a href="./productos.html" class="nav-dropdown__toggle">Productos ▾</a><div class="nav-dropdown__menu ae-products-mega" id="navProductsMenu"></div></div>
+      <a href="./pedidos.html">Pedidos</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" id="btnSearch" aria-label="Buscar"><svg class="ae-ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg></button>
+      <a class="icon-btn profile-link" href="./login.html" aria-label="Iniciar sesión"><svg class="ae-ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c.7-4 3-6 6.5-6s5.8 2 6.5 6"></path></svg></a>
+      <a class="icon-btn cart-link" href="./carrito.html" aria-label="Carrito"><svg class="ae-ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2 11h10.5l2-7H6"></path><circle cx="9" cy="19" r="1.2"></circle><circle cx="17" cy="19" r="1.2"></circle></svg><span id="cartCount">0</span></a>
+      <button class="icon-btn menu-btn" id="btnMenu" aria-label="Menú">☰</button>
+    </div>
+  </div>
+  <div class="search-panel" id="searchPanel"><div class="container search-panel__inner"><input id="searchInput" type="search" placeholder="Buscar producto, marca o código..."><button class="btn btn--primary" id="searchBtn">Buscar</button></div></div>
+</header>
+<main class="contact-page">
+  <section class="contact-hero"><div class="container"><span class="tag">ALTER EGO Hair Design Club</span><h1>Contacto, sedes y citas</h1><p>También somos salón de belleza. Atendemos con cita previa para brindarte una atención personalizada.</p></div></section>
+  <section class="section"><div class="container contact-layout">
+    <article class="contact-form-card glass-panel">
+      <h2>Escríbenos</h2><p>Completa el formulario y el mensaje llegará al correo configurado de la tienda.</p>
+      <form id="contactForm" class="contact-form">
+        <label>Nombre completo<input name="nombre" required maxlength="120" placeholder="Tu nombre"></label>
+        <label>Correo<input name="email" type="email" required maxlength="160" placeholder="correo@ejemplo.com"></label>
+        <label>Teléfono<input name="telefono" maxlength="20" placeholder="Tu número"></label>
+        <label>Sede<select name="sede"><option value="">Selecciona una sede</option><option>Surco - Av. El Polo 231</option><option>Jockey Plaza</option><option>San Isidro - Av. Conquistadores 905</option></select></label>
+        <label>Asunto<input name="asunto" required maxlength="160" placeholder="Consulta o reserva de cita"></label>
+        <label>Mensaje<textarea name="mensaje" required rows="6" maxlength="2000" placeholder="Cuéntanos cómo podemos ayudarte"></textarea></label>
+        <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+        <p id="contactMsg" class="contact-form-msg" role="status"></p>
+      </form>
+    </article>
+    <aside class="contact-info-card glass-panel"><h2>Agenda tu cita</h2><p>Escanea el QR de la sede que prefieras y conversa directamente por WhatsApp.</p><div class="contact-qr-grid">
+      <article><img src="../archivos/qr-surco.png" alt="QR WhatsApp sede Surco"><h3>Surco</h3><p>Av. El Polo 231</p><a href="https://wa.me/51940246084" target="_blank">940 246 084</a></article>
+      <article><img src="../archivos/qr-jockey.png" alt="QR WhatsApp sede Jockey"><h3>Jockey</h3><p>Jockey Plaza</p><a href="https://wa.me/51986173299" target="_blank">986 173 299</a></article>
+      <article><img src="../archivos/qr-san-isidro.png" alt="QR WhatsApp sede San Isidro"><h3>San Isidro</h3><p>Av. Conquistadores 905</p><a href="https://wa.me/51948251331" target="_blank">948 251 331</a></article>
+    </div></aside>
+  </div></section>
+  <section class="section section--soft"><div class="container"><div class="section__title"><h2>Cómo llegar</h2><p>Consulta la ubicación de cada sede en Google Maps.</p></div><div class="contact-map-grid">
+    <article class="contact-map-card"><h3>Surco</h3><iframe title="Mapa sede Surco" loading="lazy" src="https://www.google.com/maps?q=Av.%20El%20Polo%20231%2C%20Santiago%20de%20Surco%2C%20Lima&output=embed"></iframe></article>
+    <article class="contact-map-card"><h3>Jockey</h3><iframe title="Mapa sede Jockey Plaza" loading="lazy" src="https://www.google.com/maps?q=Jockey%20Plaza%2C%20Lima%2C%20Peru&output=embed"></iframe></article>
+    <article class="contact-map-card"><h3>San Isidro</h3><iframe title="Mapa sede San Isidro" loading="lazy" src="https://www.google.com/maps?q=Av.%20Conquistadores%20905%2C%20San%20Isidro%2C%20Lima&output=embed"></iframe></article>
+  </div></div></section>
+</main>
+<footer class="footer"><div class="container footer__grid"><div><img class="footer__logo" src="../archivos/blanco.png" alt="ALTER EGO"><p>Tienda y salón de belleza profesional. Atención con cita previa.</p><div class="footer-social"><a href="https://www.instagram.com/alteregostoreperu/" target="_blank"><img src="../archivos/instagram.png" alt="Instagram"></a><a href="https://wa.me/51940246084" target="_blank"><img src="../archivos/whatsapp.png" alt="WhatsApp"></a></div></div><div><h4>Comprar</h4><a href="./productos.html">Productos</a><a href="./ofertas.html">Ofertas</a><a href="./promocion.html">Promociones</a></div><div><h4>Cuenta</h4><a href="./login.html">Iniciar sesión</a><a href="./mi-cuenta.html">Mi cuenta</a><a href="./pedidos.html">Pedidos</a></div><div><h4>Contacto</h4><a href="./contacto.html">Sedes, citas y formulario</a><p>Surco · Jockey · San Isidro</p></div></div><p class="footer__bottom">© 2026 ALTER EGO. Todos los derechos reservados.</p></footer>
+<a class="whatsapp" target="_blank" href="https://wa.me/51940246084"><img src="../archivos/whatsapp.png" alt="WhatsApp"></a>
+<script src="../js/api.js?v=20260716-railway-no-localhost-1"></script><script src="../js/app.js?v=20260715-responsive-final-5"></script><script src="../js/carrito.js"></script><script src="../js/contacto.js"></script><script src="../js/theme.js"></script>
+</body></html>

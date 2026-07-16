@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | ALTER EGO</title>
+  <link rel="stylesheet" href="../css/backend.css">
+
+</head>
+<body>
+  <main class="auth-page">
+    <form class="auth-card" id="adminLoginForm">
+      <img class="auth-logo" src="../archivos/blanco.png" alt="ALTER EGO">
+      <h1>Panel administrador</h1>
+      <p>Ingresa con tu correo y contraseña de administrador.</p>
+      <input type="email" name="email" placeholder="Correo administrador" required>
+      <input type="password" name="password" placeholder="Contraseña" required>
+      <button class="btn btn--primary" type="submit">Ingresar</button>
+      <div class="auth-msg" id="adminLoginMsg"></div>
+    </form>
+  </main>
+  <script src="../js/api.js?v=20260716-railway-no-localhost-1"></script>
+  <script>
+    document.getElementById('adminLoginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('adminLoginMsg');
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      try {
+        cerrarSesion();
+        const res = await adminLoginBackend(data.email, data.password);
+        if (res.usuario.role !== 'admin') {
+          cerrarSesion();
+          throw new Error('No tienes acceso de administrador');
+        }
+        window.location.href = './admin.html';
+      } catch (error) {
+        cerrarSesion();
+        msg.textContent = error.message;
+        msg.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

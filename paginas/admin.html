@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ALTER EGO</title>
+  <link rel="icon" type="image/png" href="../archivos/Logo Negativo.png">
+  <link rel="stylesheet" href="../css/backend.css">
+
+</head>
+<body class="admin-body ae-control-panel">
+  <aside class="admin-topbar ae-sidebar">
+    <a class="admin-brand" href="./admin.html"><img src="../archivos/blanco.png" alt="ALTER EGO"><span>Panel administrativo</span></a>
+    <nav class="admin-nav ae-icon-nav">
+          <a href="./admin.html"><span>▦</span><b>Dashboard</b></a>
+      <a href="./admin-productos.html"><span>▣</span><b>Productos</b></a>
+      <a href="./admin-pedidos.html"><span>🛒</span><b>Pedidos</b><em id="sidebarPedidosCount">0</em></a>
+      <a href="./admin-clientes.html"><span>👥</span><b>Clientes</b></a>
+      <a href="./admin-reportes.html"><span>◷</span><b>Reportes</b></a>
+      <a href="./admin-configuracion.html"><span>⚙</span><b>Configuración</b></a>
+      <a href="./admin-configuracion.html#adminCarrusel"><span>▤</span><b>Carrusel</b></a>
+      <a href="./admin-configuracion.html#adminBanners"><span>▰</span><b>Banners</b></a>
+    </nav>
+    <button class="btn btn--outline admin-logout" id="logoutAdmin">Salir</button>
+  </aside>
+
+  <main class="admin-layout ae-admin-main">
+    <header class="ae-admin-header">
+      
+      <div class="ae-top-search">⌕ <input type="search" placeholder="Buscar..."></div>
+      <div class="ae-top-icons">
+        <button class="ae-notify-btn" id="aeNotifyBtn" type="button" aria-label="Notificaciones">🔔<em id="aeNotifyCount">0</em></button>
+        <button class="ae-user-btn" id="aeUserBtn" type="button" aria-label="Cuenta">👤</button>
+        <div class="ae-dropdown ae-notify-panel" id="aeNotifyPanel"><h3>Pedidos nuevos</h3><div id="aeNotifyList"><p>No hay pedidos nuevos.</p></div><a href="./admin-pedidos.html">Ver pedidos</a></div>
+        <div class="ae-dropdown ae-user-panel" id="aeUserPanel"><strong>Administrador</strong><small>admin@alterego.com</small><button class="btn btn--secondary" type="button" id="aeUserLogout">Cerrar sesión</button></div>
+      </div>
+    </header>
+    <section class="ae-dashboard-title"><h1>Dashboard</h1><p>Indicadores generales del negocio</p></section>
+    <section class="admin-stats ae-dashboard-kpis" id="adminStats"></section>
+    <section class="admin-visual-quick-actions">
+      <a href="./admin-configuracion.html#adminCarrusel"><span>▤</span><div><strong>Gestionar carrusel</strong><small>Crear, editar, ordenar u ocultar diapositivas</small></div></a>
+      <a href="./admin-configuracion.html#adminBanners"><span>▰</span><div><strong>Gestionar banners</strong><small>Crear, editar, elegir tipo y cambiar visibilidad</small></div></a>
+    </section>
+    <section class="admin-dashboard-grid ae-dashboard-only ae-dashboard-igual-boceto">
+      <article class="admin-section"><div class="ae-card-head"><h2>Resumen de ventas</h2><select id="ventasRange"><option>Últimos 7 días</option></select></div><div id="dashboardPanel"></div></article>
+      <article class="admin-section"><h2>Pedidos por estado</h2><div id="pedidosEstadoPanel"></div></article>
+      <article class="admin-section"><div class="ae-card-head"><h2>Últimos pedidos</h2><a class="ae-mini-link" href="./admin-pedidos.html">Ver todos</a></div><div class="admin-table-wrap"><table class="admin-table" id="ultimosPedidosDashboard"></table></div></article>
+    </section>
+  </main>
+  <div class="admin-toast" id="adminToast"></div>
+  <script src="../js/api.js?v=20260716-railway-final-4"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

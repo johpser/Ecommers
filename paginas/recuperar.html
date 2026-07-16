@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar contraseña | ALTER EGO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<script>(function(){try{var t=sessionStorage.getItem('alterego_theme_mode');t=t==='light'?'light':'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="../archivos/Logo Negativo.png">
+  <link rel="stylesheet" href="../css/frontend.css?v=20260715-nav-light-fix">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <img src="../archivos/blanco.png" alt="ALTER EGO">
+    <h1>Recuperar contraseña</h1>
+    <p>Escribe tu correo y te enviaremos un enlace para crear una nueva contraseña.</p>
+    <form class="form" id="forgotPasswordForm">
+      <input required type="email" name="email" placeholder="Correo electrónico">
+      <button class="btn btn--primary" type="submit">Enviar enlace</button>
+      <div class="alert" id="authMsg"></div>
+    </form>
+    <p style="margin-top:16px"><a href="./login.html"><strong>Volver al login</strong></a></p>
+  </main>
+  <script src="../js/api.js?v=20260716-railway-final-4"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/theme.js"></script>
+</body>
+</html>

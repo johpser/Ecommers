@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Promoción | ALTER EGO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<script>(function(){try{var t=sessionStorage.getItem('alterego_theme_mode');t=t==='light'?'light':'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="../archivos/Logo Negativo.png" rel="icon" type="image/png"/>
+<link href="../css/frontend.css?v=20260715-nav-light-fix" rel="stylesheet"/>
+</head>
+<body>
+<header class="header">
+<div class="container header__content">
+<a class="logo" href="../index.html"><img alt="ALTER EGO" src="../archivos/blanco.png"/></a>
+<nav class="nav" id="nav">
+<a href="../index.html">Inicio</a>
+<div class="nav-dropdown">
+<a class="nav-dropdown__toggle" href="./productos.html">Productos ▾</a>
+<div class="nav-dropdown__menu ae-products-mega" id="navProductsMenu"></div>
+</div>
+<a href="./pedidos.html">Pedidos</a>
+</nav>
+<div class="header__actions">
+<button aria-label="Buscar" class="icon-btn" id="btnSearch"><svg class="ae-ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg></button>
+<a aria-label="Iniciar sesión" class="icon-btn profile-link" href="./login.html" title="Iniciar sesión"><svg class="ae-ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c.7-4 3-6 6.5-6s5.8 2 6.5 6"></path></svg></a>
+<a aria-label="Carrito" class="icon-btn cart-link" href="./carrito.html"><svg class="ae-ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2 11h10.5l2-7H6"></path><circle cx="9" cy="19" r="1.2"></circle><circle cx="17" cy="19" r="1.2"></circle></svg><span id="cartCount">0</span></a>
+<button aria-label="Menú" class="icon-btn menu-btn" id="btnMenu">☰</button>
+</div>
+</div>
+<div class="search-panel" id="searchPanel"><div class="container search-panel__inner"><input id="searchInput" placeholder="Buscar producto, marca o código..." type="search"/><button class="btn btn--primary" id="searchBtn">Buscar</button></div></div>
+</header>
+<section class="page-hero page-hero--offers promociones-hero">
+<div class="container">
+<span class="tag">Promociones activas</span>
+<h1>Productos en promoción</h1>
+<p>Solo aparecen los productos que marques como <strong>En promoción</strong> desde el panel administrativo.</p>
+</div>
+</section>
+<main class="section shop-page promociones-page">
+<div class="container">
+<div class="toolbar toolbar--offers promociones-toolbar">
+<input id="promotionSearch" placeholder="Buscar promoción por producto, marca o categoría..." type="search"/>
+</div>
+<div class="products-grid shop-products-grid" id="promotionGrid"></div>
+</div>
+</main>
+<footer class="footer">
+<div class="container footer__grid">
+<div>
+<img alt="ALTER EGO" class="footer__logo" src="../archivos/blanco.png"/>
+<p>Tienda y salón de belleza profesional. Atención con cita previa en nuestras tres sedes.</p>
+<div aria-label="Redes sociales" class="footer-social">
+<a aria-label="Instagram" href="https://www.instagram.com/alteregostoreperu/" rel="noopener noreferrer" target="_blank"><img alt="Instagram" src="../archivos/instagram.png"/></a>
+<a aria-label="WhatsApp" href="https://wa.me/51940246084" rel="noopener noreferrer" target="_blank"><img alt="WhatsApp" src="../archivos/whatsapp.png"/></a>
+</div>
+</div>
+<div><h4>Comprar</h4><a href="./productos.html">Productos</a><a href="./ofertas.html">Ofertas</a><a href="./promocion.html">Promociones</a><a href="./carrito.html">Carrito</a></div>
+<div><h4>Cuenta</h4><a href="./login.html">Iniciar sesión</a><a href="./mi-cuenta.html">Mi cuenta</a><a href="./pedidos.html">Pedidos</a></div>
+<div><h4>Contacto</h4><a href="./contacto.html">Sedes, citas y formulario</a><p>Surco: 940 246 084</p><p>Jockey: 986 173 299</p><p>San Isidro: 948 251 331</p></div>
+</div><p class="footer__bottom">© 2026 ALTER EGO. Todos los derechos reservados.</p></footer>
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=51940246084&amp;text=Hola,%20deseo%20información%20sobre%20productos%20capilares" target="_blank"><img alt="WhatsApp" src="../archivos/whatsapp.png"/></a>
+<script src="../js/api.js?v=20260716-railway-final-4"></script>
+<script src="../js/carrito.js"></script>
+<script src="../js/app.js?v=20260715-responsive-final-5"></script>
+<script src="../js/productos.js?v=20260715-filas-sin-vacios-v2"></script>
+<script src="../js/promocion.js"></script>
+<script src="../js/theme.js"></script>
+</body>
+</html>

@@ -89,7 +89,7 @@ async function iniciarSesion(e) {
             if (redirect === 'checkout') {
                 window.location.href = './checkout.html';
             } else {
-                window.location.href = './mi-cuenta.html';
+                window.location.href = '../index.html';
             }
         }, 700);
     } catch (error) {
